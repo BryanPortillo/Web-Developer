@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Retail Con Estilo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Poppins", sans-serif
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .w3-half img {
+    margin-bottom: -6px;
+    margin-top: 16px;
+    opacity: 0.8;
+    cursor: pointer
+  }
+
+  .w3-half img:hover {
+    opacity: 1
+  }
+</style>
+
+<body>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;"
+    id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+      style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+      <h3 style="border: 4px solid white" class="w3-padding-64; "><b> ... RETAIL ...........................<br> ...
+          ARCHITECTURE .....</b></h3>
+    </div>
+    <div class="w3-bar-block">
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicio</a>
+      <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Portafolio</a>
+      <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Servicios</a>
+      <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Nuestro Equipo</a>
+      <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ofertas</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+    <span>Retail Con Estilo</span>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="showcase">
+      <h1 class="w3-jumbo"><b>Diseño Corporativo</b></h1>
+      <h1 class="w3-xxxlarge w3-text-red"><b>Proyectos Realizados</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+    </div>
+
+    <!-- Photo grid (modal) -->
+    <div class="w3-row-padding">
+
+
+
+      <div class="w3-half">
+
+
+        <img src="img\nathan-dumlao-g8gOnhMRckw-unsplash.jpg" style="width:97%" onclick="onClick(this)"
+          alt="Cafeteria San Jorge en Zona 1 Ciudad de Guatemala ">
+        <img src="img\shridhar-gupta-dZxQn4VEv2M-unsplash.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Oficinas para Desarrollo y Diseño En zona 9 Empresa Buildawow">
+        <img src="img/heidi-sandstrom-2TLREZi7BUg-unsplash.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Centro Comercial los Jardines En Barcelona">
+      </div>
+
+      <div class="w3-half">
+        <img src="img\olu-gbadebo-iD-kJmgptn0-unsplash.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Re-Decoracion Aeropuerto Internacional de Barcelona">
+        <img src="img\plqml-feliperizo-co-1qvUsVrKrMI-unsplash.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Optimizacion de Espacion en Habitaciones del Hotel Solei Guatemala">
+        <img src="img\rr-abrot-pNIgH0y3upM-unsplash.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Cafeteria Raul Estilo Vintage  Majadas Guatemala">
+        <img src="img\comercialeditado.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Centro Comercial Las Ventanas San Lucas Guatemala">
+
+      </div>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="w3-container" id="services" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Nuestros Servicios</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p>Hacemos de tus proyectos nuestra mejor Obra con un Equipo de Profesionales con las ultimas tendencias en
+        Arquitectura</p>
+      <p>Somos una firma de arquitectura que cuenta con presencia en la Ciudad de Guatemala y en Barcelona.
+        Nuestra punta de lanza es crear un diseño contemporáneo y moderno de la mano del desarrollo sostenible y las
+        últimas soluciones en tecnología, a través de arquitectura innovadora.
+        Nuestro portafolio incluye más de 300 proyectos de interiores corporativos y arquitectura, 10 de los cuales han
+        obtenido la certificación LEED entre los cuales se encuentran:
+        PepsiCo Bebidas, Puma Energy y Nivea Biersdorf.
+      </p>
+    </div>
+
+    <!-- Designers -->
+    <div class="w3-container" id="designers" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Conoce A Nuestros Arquitectos </b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p>El Mejor Equipo del Mundo.</p>
+      <p>La Arquitectura, además de un arte, es un servicio a la colectividad que conlleva una responsabilidad de
+        incuestionable dimensión cultural y social.
+        <br>
+        Más allá de la individualidad, consideramos nuestra profesión como un trabajo colectivo y pluridisciplinar.
+        <br>
+        En un mundo cada vez más interconectado, creemos en el trabajo en equipo como generador de valor, entendiendo la
+        creatividad como la capacidad de dar la mejor respuesta al programa y al contexto de cada proyecto, resultado
+        del diálogo enriquecedor y del intercambio entre todos los agentes de un equipo complejo.
+        <br>
+        Nuestra meta es la excelencia en el diseño desde una perspectiva de diversidad y libertad creativa, sumada al
+        rigor técnico y la capacidad para dominar todas las etapas del proyecto, desde la concepción hasta la obra
+        finalizada.
+      </p>
+      <p><b>Retail Architect = Valores + Experiencia + Juventud + Talento</b>:</p>
+    </div>
+
+    <!-- The Team -->
+    <div class="w3-row-padding w3-grayscale">
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="img\team.jpg" alt="John" style="width:100%">
+          <div class="w3-container">
+            <h3>Versatilidad</h3>
+            <p class="w3-opacity">Equipo Internacional</p>
+            <p>En la actualidad somos un grupo formado por profesionales de diferentes nacionalidades de America, Europa
+              Y Asia, inyectando
+              experiencia, juventud y talento en cada uno de los proyectos que acometemos..</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="img\trabajo-en-equipo-multidisciplinar-2_174444.jpg" alt="Jane" style="width:100%">
+          <div class="w3-container">
+            <h3>Tecnologia</h3>
+            <p class="w3-opacity">Uso de Herramientas Innovadoras</p>
+            <p>Integramos el máximo rigor técnico al proceso creativo, proporcionando al cliente un servicio global
+              desde
+              la fase conceptual hasta la dirección de obra, utilizando diferentes tecnologías adaptadas a cada proyecto
+              entre ellas la tecnología BIM creando un modelo que
+              controla todos los aspectos de cada edificio.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="img\ceo.jpg" alt="Mike" style="width:100%">
+          <div class="w3-container">
+            <h3>Eliza Zavala</h3>
+            <p class="w3-opacity">CEO & Founder</p>
+            <p>"Un arquitecto comienza dibujando Sueños y termina construyendo Realidades" <br>Tu proyecto te espera y
+              trabaja con el mejor Equipo Garantizado..</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Packages / Pricing Tables -->
+    <div class="w3-container" id="packages" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Combos Especiales.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p>Puedes elegir el combo que desees. Aplica Resctricciones. Cada proyecto puede variar dependiendo la complejidad
+        del mismo</p>
+    </div>
+
+    <div class="w3-row-padding">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-light-grey w3-center">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basico</li>
+          <li class="w3-padding-16">Planta de piso</li>
+          <li class="w3-padding-16">10 horas de soporte</li>
+          <li class="w3-padding-16">Fotografía</li>
+          <li class="w3-padding-16">Modelo 3D</li>
+          <li class="w3-padding-16">Elaboración de maqueta a escala</li>
+          <li class="w3-padding-16">
+            <h2>$ 199</h2>
+            <span class="w3-opacity">Por Planta</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-light-grey w3-center">
+          <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
+          <li class="w3-padding-16">Planta de piso</li>
+          <li class="w3-padding-16">50 horas de soporte</li>
+          <li class="w3-padding-16">Fotografía</li>
+          <li class="w3-padding-16">Modelo 3D</li>
+          <li class="w3-padding-16">Elaboración de maqueta a escala</li>
+          <li class="w3-padding-16">
+            <h2>$ 249</h2>
+            <span class="w3-opacity">Por Planta</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="w3-container" id="contact" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Contacto.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p>No dudes en comunicarte con nosotros, sera un placer escuchar tud ideas!</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Nombre</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Mensaje</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Enviar
+          Mensaje</button>
+      </form>
+    </div>
+
+    <!-- End page content -->
+  </div>
+
+
+  <!-- W3.CSS Container -->
+
+  <Footer>
+  <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+
+
+    <p style="text-align: right"> <b>2019 Diseñado y Elaborado por: </b></p>
+
+    <p style="text-align: right"> <b>Bryan P. Cod. 0901-11-9152. </b> </p>
+
+
+
+    <p style="text-align:right">
+      <a href="https://unsplash.com/search/photos/comercio"> Imagenes obtenidas de:
+        www.unsplash.es </a> </p>
+
+    <p style="text-align:right">
+      <a href="https://www.freepik.es/"> y de:
+        www.freepik.es </a> </p>
+
+
+    <p class="w3-right">Plantilla Obtenida en: <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS"
+        target="_blank" class="w3-hover-opacity">w3.css</a></p>
+
+
+  </div>
+
+</Footer>
+
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+  </script>
+
+</body>
+
+</html>
