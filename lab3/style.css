@@ -1,0 +1,141 @@
+h1{
+text-align: center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+header {
+	width:100%; /* Establecemos que el header abarque el 100% del documento */
+	overflow:hidden; /* Eliminamos errores de float */
+	background:transparent;
+	margin-bottom:20px;
+}
+ 
+.wrap {
+	width:90%; /* Establecemos que el ancho sera del 90% */
+	max-width:80%; /* Aqui le decimos que el ancho máximo sera de 1000px */
+	margin:auto; /* Centramos los elementos */
+	overflow:hidden; /* Eliminamos errores de float */
+}
+ 
+header .logo {  /* para indicar que la imagen del logo este en la izquierda */
+	color:#f2f2f2;
+	font-size:25px;
+	line-height:50px;
+	float:left;
+}
+ 
+header nav {  /* Para indicar que el navegador de la pagina se coloque a la derecha*/
+	float:right;
+	line-height:200px;
+}
+ 
+header nav a {
+	display:inline-block;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 20px;
+	line-height:normal;
+	font-size:20px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease; /* para indicar que tendra una trasicion de cambio de color */
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+ 
+header nav a:hover {    /*se indica que cambiara de color las opciones del navegador */
+	background:#0f014e;
+	border-radius:25px;
+}
+
+
+@media screen and (max-width: 950px) { /*para hacer responsive el header*/
+	header .logo,
+	header nav {
+		width:100%;
+		text-align:center; /*Centramos el menu y el logotipo*/
+		line-height:100px;
+	}
+ 
+}
+
+
+body{
+
+  background-image: url(img/pawel-kadysz-CuFYW1c97w8-unsplash.jpg);
+  background-repeat: no-repeat center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size:cover;
+  -moz-background-size:cover;
+  background-attachment: scroll;
+
+}
+
+
+div {
+    background-color: rgb(241, 1, 1);
+    max-width: 400px;
+height: auto;
+    border: 15px solid rgb(99, 29, 228);
+    padding: 25px;
+  margin: 10px;
+
+  color:rgb(117, 44, 235);
+  
+}
+
+
+
+.paralelo {
+    background-color: rgb(15, 201, 15);
+    max-width: 400px;
+height: auto;
+
+    border: 15px solid rgb(223, 149, 12);
+    padding: 50px;
+  margin: 20px;
+  color:#e5ff00;        
+  
+}
+
+section{
+  float: right;
+  border: 18px solid rgb(78, 2, 165);
+
+}
+
+article{
+  float: left;
+  border: 18px outset rgb(8, 151, 247);
+  height: 730px;
+  width: 600px;
+}
+
+
+p{
+  background: #0b013b;
+  border-radius: 10 px;
+  border: 3px solid rgb(193, 211, 211);
+  text-align: justify;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+  
+}
+
+footer{
+
+  width:99%; /* Establecemos que el header abarque el 100% del documento */
+  height: 70px;
+	overflow:hidden; /* Eliminamos errores de float */
+  background-color: #2d264e;
+  color: rgb(87, 243, 243);
+  text-align: center;
+  margin-top: 100px;
+  border-radius: 10px;
+  border: 9px solid rgb(87, 243, 243);
+  font-size: 5mm;
+  }  
+}
+
+
