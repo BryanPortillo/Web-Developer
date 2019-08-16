@@ -1,0 +1,159 @@
+*
+{
+    margin: 0;
+    padding: 0;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body
+{
+    background: rgb(43, 128, 43);
+}
+
+header, .main, footer
+{
+    width: 91%;
+    max-width: 100%;
+    margin: 20px auto;
+  
+}
+
+header nav
+{  
+    background: rgb(71, 224, 24);
+    overflow: hidden;
+    border-radius: 10px;
+    border: 5px solid rgb(31, 5, 124);
+    
+}
+
+header nav ul
+{
+    text-align: center;
+    list-style: none;
+      
+}
+/*
+.menu{
+    overflow: hidden;
+  float:center;
+  
+}
+*/
+header nav ul li{
+    float: left;
+}
+
+header nav ul li a
+{
+padding: 58px 20px;
+display:block;
+color: white;
+text-decoration: none;
+font-size: 8mm;
+
+}
+
+header nav ul li a:hover
+{
+    background: rgb(1, 78, 42);
+    text-align: left;
+}
+
+
+
+.slider {
+    width: 90%;
+    height: 48%;
+	margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  border: 10px solid rgb(22, 26, 26);
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 200%;
+	
+	animation: cambio 10s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+	width: 100%;
+}
+
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	24% {margin-left: 0;}
+	
+	25% {margin-left: -400%;}
+	49% {margin-left: -400%;}
+	
+	50% {margin-left: -800%;}
+	74% {margin-left: -800%;}
+	
+	75% {margin-left: -1350%;}
+	100% {margin-left: -1350%;}
+}
+
+
+.main .articles
+{
+    width: 62%;
+    margin-right: 3%;
+    float: left;
+    background:rgb(76, 230, 209);
+    padding: 0.5%;
+    border-radius: 10px;
+    border: 9px solid rgb(87, 103, 243);
+
+   
+ 
+}
+
+.main .articles article{
+
+    padding: 10px;
+    background: rgb(38, 221, 22);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+aside{
+    width:30%;
+    background: rgb(2, 153, 90);
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 9px solid rgb(227, 243, 87);
+
+}
+
+footer{
+    margin-top: 450px;
+    background: rgb(24, 241, 78);
+    color: white;
+    clear:both;
+    padding: 10px 0px;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid rgb(37, 5, 124);
+    height: 10%;
+    font-size: 155%;
+}
+
+
+
+
+
+
+
+
